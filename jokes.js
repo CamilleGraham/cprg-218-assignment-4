@@ -17,7 +17,7 @@ function newJoke(category){
         headingElement.textContent = "A Random Pun!";
     }
         else {
-        headingElement.textContent = `A Random ${category} Joke`;
+        headingElement.textContent = `A Random ${category} Joke!`;
         }
 });
 }
@@ -25,3 +25,20 @@ function newJoke(category){
 document.getElementById("Programming").addEventListener("click",function(){
     newJoke("Programming");
 }); 
+
+document.getElementById("Misc").addEventListener("click", function(){
+    newJoke("Misc");
+});
+
+document.getElementById("Pun").addEventListener("click", function(){
+    newJoke("Pun");
+
+});
+
+document.getElementById("Spooky").addEventListener("click", function(){
+    newJoke("Spooky")
+});
+
+document.getElementById("Christmas").addEventListener("click", function (){
+    newJoke("Christmas")
+});
