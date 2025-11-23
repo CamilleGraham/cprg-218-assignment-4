@@ -1,16 +1,10 @@
-fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
-    .then(response => response.json() )
-    .then(data =>{
-        joke.textContent = data.joke;
-    })
 
-function newJoke(catagory){
+function newJoke(category){
     fetch(`https://v2.jokeapi.dev/joke/${category}?safe-mode`)
     .then(response => response.json() )
-    .then(data =>{
+    .then(data => {
         const jokeElement = document.getElementById("joke");
         const headingElement = document.getElementById("heading");
-    })
 
     if (data.type==="single"){
         jokeElement.textContent = data.joke; 
@@ -23,16 +17,11 @@ function newJoke(catagory){
         headingElement.textContent = "A Random Pun!";
     }
         else {
-        headingElement.textContent = 'A Random ${category} Joke';
+        headingElement.textContent = `A Random ${category} Joke`;
         }
-
-    .catch(error => { 
-    console.error ("error fetching joke", error);
-    jokeElement.textContent = "I can't think of a joke. No one is funny ALL the time!";
-})
-
+});
 }
 
 document.getElementById("Programming").addEventListener("click",function(){
     newJoke("Programming");
-)}
+}); 
