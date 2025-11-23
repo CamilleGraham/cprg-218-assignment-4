@@ -18,12 +18,12 @@ function newJoke(catagory){
         else {
         jokeElement.textContent = data.setup + "..." + data.delivery;
         }
-
+    
     if (data.category==="Pun"){
         headingElement.textContent = "A Random Pun!";
     }
         else {
-        headingElement.textContent = 'A ${category} Joke';
+        headingElement.textContent = 'A Random ${category} Joke';
         }
 
     .catch(error => { 
@@ -33,3 +33,6 @@ function newJoke(catagory){
 
 }
 
+document.getElementById("Programming").addEventListener("click",function(){
+    newJoke("Programming");
+)}
