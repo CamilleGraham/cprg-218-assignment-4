@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    margin: 3rem;
+    padding: 0;
+    background-color: #fff9c4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#joke{
+    border: 2px solid;
+    border-radius: 15px;
+    padding: .75rem;
+    font-size: 1.75rem;
+    background-color: #fffdf0;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#catEmoji{
+    margin: 0;
+    font-size: 7rem;
+    text-shadow: 3px 3px 10px #4d4d4d;
+}
+
+.buttons button{
+    font-family: inherit;
+    font-size: 1.4rem;
+    border-radius: 15px;
+    padding: .5rem;
+  
+   
+}

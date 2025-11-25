@@ -1,4 +1,5 @@
 
+
 function newJoke(category){
     fetch(`https://v2.jokeapi.dev/joke/${category}?safe-mode`)
     .then(response => response.json() )
@@ -6,18 +7,22 @@ function newJoke(category){
         const jokeElement = document.getElementById("joke");
         const headingElement = document.getElementById("heading");
 
-    if (data.type==="single"){
+    if (data.type=="single"){
         jokeElement.textContent = data.joke; 
     }
         else {
         jokeElement.textContent = data.setup + "..." + data.delivery;
         }
     
-    if (data.category==="Pun"){
-        headingElement.textContent = "A Random Pun!";
+    if (data.category=="&#128518 Pun"){
+        headingElement.textContent = "&#128518; A Random Pun! &#128514;";
     }
+        else if (data.category== "Misc"){
+            headingElement.textContent = "&#128518; A Random Miscellaneous Joke! &#128514;"
+        }
+
         else {
-        headingElement.textContent = `A Random ${category} Joke!`;
+        headingElement.textContent = `&#128518; A Random ${category} Joke! &#128514;`;
         }
 });
 }
