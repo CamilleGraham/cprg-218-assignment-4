@@ -9,6 +9,11 @@ fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
         }
     })
 
+    .catch(error =>{
+        console.error ("error fetching joke", error);
+        joke.textContent = "I can't think of any jokes... I'm not a machine!";
+        });  
+
 function newJoke(category){
     fetch(`https://v2.jokeapi.dev/joke/${category}?safe-mode`)
      .then(response => response.json() )
@@ -25,14 +30,19 @@ function newJoke(category){
         heading.textContent = "A Random Pun!";
     }
         else if (data.category== "Misc"){
-            heading.textContent = "A Random Miscellaneous Joke!"
+            heading.textContent = "A Random Miscellaneous Joke!";
             }
 
             else {
             heading.textContent = `A Random ${category} Joke!`;
             }
 
-});
+    })
+
+    .catch(error =>{
+    console.error ("error fetching joke", error);
+    joke.textContent = "I can't think of any jokes... I'm not a machine!";
+    });
 }
 
 document.getElementById("Programming").addEventListener("click",function(){

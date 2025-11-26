@@ -36,3 +36,53 @@ body{
     padding: .5rem;
   
 }
+
+#Programming:hover{
+    background-color: #002b36;
+    color: #2ee6ff;
+}
+
+#Programming:active {
+    background-color: #2ee6ff;
+    color: #002b36;
+}
+
+#Misc:hover{
+    background-color: #fd48a3;
+    color: #00ced1;
+}
+
+#Misc:active {
+    background-color: #32cd32;
+    color: #ff4500;
+}
+
+#Pun:hover{
+    background-color: #ffc310;
+    color: black;
+}
+
+#Pun:active {
+    background-color: #663333;
+    color: #ffff00;
+}
+
+#Spooky:hover{
+    background-color: black;
+    color: white;
+}
+
+#Spooky:active {
+    background-color: #ff6a00;
+    color: black;
+}
+
+#Christmas:hover{
+    background-color: #165b33;
+    color: white;
+}
+
+#Christmas:active {
+    background-color: #c70003;
+    color: white;
+}
